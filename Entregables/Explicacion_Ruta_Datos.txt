@@ -1,0 +1,6 @@
+Añadimos un multiplexor para la entrada paralela de RegDivisor
+Añadimos un mux a la entrada del sumador que tenia el dividendo, para seleccionar entre el dividendo y el 3
+Para generar el 3 lo construimos con (m-1) ceros por la izquierda luego "11" para el 3 y luego el mismo relleno de 0s por la derecha que el divisor.
+Añadimos una salida al registro del divisor para que nos indique su bit de signo ya que puede haber overflow en la suma y cambiarse el signo.
+Añadimos 2 señales de control mux_suma (para el mux del sumador) y mux_divisor (para el mux del divisor).
+Añadimos una seña de salida MSB_Divisor para informa del signo del divisor a la UC.

@@ -1,0 +1,308 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Nov 18 09:14:16 2024
+# Process ID: 6780
+# Current directory: C:/Vivado_Pr/Practica_4/Practica_4.runs/synth_1
+# Command line: vivado.exe -log sintesis_div.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sintesis_div.tcl
+# Log file: C:/Vivado_Pr/Practica_4/Practica_4.runs/synth_1/sintesis_div.vds
+# Journal file: C:/Vivado_Pr/Practica_4/Practica_4.runs/synth_1\vivado.jou
+# Running On: TinkPad-Dani, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 21168 MB
+#-----------------------------------------------------------
+source sintesis_div.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 450.129 ; gain = 165.586
+Command: read_checkpoint -auto_incremental -incremental C:/Vivado_Pr/Practica_4/Practica_4.srcs/utils_1/imports/synth_1/sintesis_div.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Vivado_Pr/Practica_4/Practica_4.srcs/utils_1/imports/synth_1/sintesis_div.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top sintesis_div -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9212
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1265.336 ; gain = 410.289
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'sintesis_div' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/sintesis_div.vhd:25]
+INFO: [Synth 8-3491] module 'divisor_ent' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/divisor_ent.vhd:34' bound to instance 'divInstance' of component 'divisor_ent' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/sintesis_div.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'divisor_ent' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/divisor_ent.vhd:45]
+	Parameter n bound to: 8 - type: integer 
+	Parameter m bound to: 4 - type: integer 
+	Parameter n bound to: 8 - type: integer 
+	Parameter m bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'data_path' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/data_path.vhd:34' bound to instance 'my_datapath' of component 'data_path' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/divisor_ent.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'data_path' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/data_path.vhd:46]
+	Parameter n bound to: 8 - type: integer 
+	Parameter m bound to: 4 - type: integer 
+	Parameter n_bits bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'alu' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/sumrest.vhd:34' bound to instance 'SumRest' of component 'alu' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/data_path.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'alu' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/sumrest.vhd:41]
+	Parameter n_bits bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'alu' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/sumrest.vhd:41]
+	Parameter num_bits bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'comparador' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/new/comparador.vhd:34' bound to instance 'Comp' of component 'comparador' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/data_path.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'comparador' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/new/comparador.vhd:42]
+	Parameter num_bits bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'comparador' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/new/comparador.vhd:42]
+	Parameter n bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'counter_n' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/counter_n.vhd:34' bound to instance 'ContRk' of component 'counter_n' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/data_path.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'counter_n' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/counter_n.vhd:47]
+	Parameter n bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter_n' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/counter_n.vhd:47]
+	Parameter n_bits bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'reg_SIPO_right' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/reg_SIPO_right.vhd:34' bound to instance 'RegDivisor' of component 'reg_SIPO_right' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/data_path.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'reg_SIPO_right' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/reg_SIPO_right.vhd:45]
+	Parameter n_bits bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg_SIPO_right' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/reg_SIPO_right.vhd:45]
+	Parameter n_bits bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/registro.vhd:34' bound to instance 'RegDividendo' of component 'registro' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/data_path.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'registro' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/registro.vhd:44]
+	Parameter n_bits bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'registro' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/registro.vhd:44]
+	Parameter n_bits bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'reg_SIPO_left' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/reg_SIPO_left.vhd:34' bound to instance 'Rq' of component 'reg_SIPO_left' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/data_path.vhd:185]
+INFO: [Synth 8-638] synthesizing module 'reg_SIPO_left' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/reg_SIPO_left.vhd:45]
+	Parameter n_bits bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg_SIPO_left' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/reg_SIPO_left.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'data_path' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/data_path.vhd:46]
+INFO: [Synth 8-3491] module 'controller' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/controller.vhd:34' bound to instance 'my_controller' of component 'controller' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/divisor_ent.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/controller.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'controller' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/controller.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'divisor_ent' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/new/divisor_ent.vhd:45]
+INFO: [Synth 8-3491] module 'displays' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/displays.vhd:7' bound to instance 'conv_7segInstance' of component 'displays' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/sintesis_div.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'displays' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/displays.vhd:20]
+INFO: [Synth 8-3491] module 'conv_7seg' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/conv_7seg.vhd:4' bound to instance 'conv_7seg_digito_0' of component 'conv_7seg' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/displays.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'conv_7seg' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/conv_7seg.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'conv_7seg' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/conv_7seg.vhd:9]
+INFO: [Synth 8-3491] module 'conv_7seg' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/conv_7seg.vhd:4' bound to instance 'conv_7seg_digito_1' of component 'conv_7seg' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/displays.vhd:37]
+INFO: [Synth 8-3491] module 'conv_7seg' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/conv_7seg.vhd:4' bound to instance 'conv_7seg_digito_2' of component 'conv_7seg' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/displays.vhd:38]
+INFO: [Synth 8-3491] module 'conv_7seg' declared at 'C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/conv_7seg.vhd:4' bound to instance 'conv_7seg_digito_3' of component 'conv_7seg' [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/displays.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'displays' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/displays.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'sintesis_div' (0#1) [C:/Vivado_Pr/Practica_4/Practica_4.srcs/sources_1/imports/Ficheros divisor parte básica-P4/sintesis_div.vhd:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1356.848 ; gain = 501.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1356.848 ; gain = 501.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1356.848 ; gain = 501.801
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1356.848 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Vivado_Pr/Practica_4/Practica_4.srcs/constrs_1/imports/Ficheros divisor parte básica-P4/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Vivado_Pr/Practica_4/Practica_4.srcs/constrs_1/imports/Ficheros divisor parte básica-P4/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Vivado_Pr/Practica_4/Practica_4.srcs/constrs_1/imports/Ficheros divisor parte básica-P4/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sintesis_div_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/sintesis_div_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1406.730 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1406.730 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'STATE_reg' in module 'controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s0 |                              000 |                              000
+                      s1 |                              001 |                              001
+                      s2 |                              010 |                              010
+                      s3 |                              011 |                              011
+                      s4 |                              100 |                              100
+                      s5 |                              101 |                              101
+                      s6 |                              110 |                              110
+                      s7 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'STATE_reg' using encoding 'sequential' in module 'controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    9 Bit        Muxes := 4     
+	   8 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   4 Input    7 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+	   8 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    13|
+|3     |LUT1   |     1|
+|4     |LUT2   |    11|
+|5     |LUT3   |    16|
+|6     |LUT4   |    17|
+|7     |LUT5   |    22|
+|8     |LUT6   |    24|
+|9     |FDCE   |    25|
+|10    |FDRE   |    33|
+|11    |IBUF   |    15|
+|12    |OBUF   |    20|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1406.730 ; gain = 551.684
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.730 ; gain = 501.801
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1406.730 ; gain = 551.684
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1406.730 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1406.730 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ef708a33
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1406.730 ; gain = 932.730
+INFO: [Common 17-1381] The checkpoint 'C:/Vivado_Pr/Practica_4/Practica_4.runs/synth_1/sintesis_div.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file sintesis_div_utilization_synth.rpt -pb sintesis_div_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 18 09:15:07 2024...

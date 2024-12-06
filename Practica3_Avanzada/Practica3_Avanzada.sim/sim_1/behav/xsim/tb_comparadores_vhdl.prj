@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Practica3_Avanzada.srcs/sources_1/imports/new/celda_iter.vhd" \
+"../../../../Practica3_Avanzada.srcs/sources_1/imports/new/comparador.vhd" \
+"../../../../Practica3_Avanzada.srcs/sources_1/imports/new/red_iterativa_comparadores.vhd" \
+"../../../../Practica3_Avanzada.srcs/sim_1/imports/Ficheros accesorios práctica 3 avanzada-20241104/tb_comparadores.vhd" \
+
+# Do not sort compile order
+nosort

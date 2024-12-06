@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Practica1_Avanzada.srcs/sources_1/new/contadorMod16.vhd" \
+"../../../../Practica1_Avanzada.srcs/sources_1/imports/Práctica 1 avanzada Grupo D-20240930/registro.vhd" \
+"../../../../Practica1_Avanzada.srcs/sources_1/imports/Práctica 1 avanzada Grupo D-20240930/sumador.vhd" \
+"../../../../Practica1_Avanzada.srcs/sim_1/imports/Práctica 1 avanzada Grupo D-20240930/simulacion_contador.vhd" \
+
+# Do not sort compile order
+nosort

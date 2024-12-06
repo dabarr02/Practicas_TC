@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Vivado_Pr/Practica_3/Practica_3.srcs/sources_1/new/red_arbol_comparadores.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'red_arbol_comparadores'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Vivado_Pr/Practica_3/Practica_3.srcs/sources_1/imports/Ficheros accesorios-20241031/tb_comparadores.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_comparadores'
