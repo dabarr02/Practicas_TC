@@ -116,7 +116,7 @@ when S4 =>--MALA SUERTE
     if(segundos_5='1')then --5s?
         NEXT_STATE<=S0; --inicio
     else
-       NEXT_STATE<=S3; --seguir contando
+       NEXT_STATE<=S4; --seguir contando
     end if;
 
 end case;

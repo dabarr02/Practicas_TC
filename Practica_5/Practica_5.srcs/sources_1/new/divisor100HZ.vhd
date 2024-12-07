@@ -6,7 +6,7 @@
 -- Module Name:    divisor - divisor_arch 
 -- Project Name: 
 -- Target Devices: 
--- Description: Creación de un reloj de 100Hz a partir de
+-- Description: Creaciï¿½n de un reloj de 100Hz a partir de
 --		un clk de 100 MHz
 --  Contamos hasta 1M en vez de 100M
 ----------------------------------------------------------------------------------
@@ -30,7 +30,7 @@ architecture divisor100HZ_arch of divisor100HZ is
 
  
 clk_salida<=clk_aux;
-  contador:
+  
   PROCESS(rst, clk_entrada)
   BEGIN
     IF (rst='1') THEN
@@ -45,6 +45,6 @@ clk_salida<=clk_aux;
 	   clk_aux<='0';
       END IF;
     END IF;
-  END PROCESS contador;
+  END PROCESS ;
 
 end divisor100HZ_arch;

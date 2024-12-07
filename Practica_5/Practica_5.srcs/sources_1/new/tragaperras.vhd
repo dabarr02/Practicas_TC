@@ -45,7 +45,48 @@ END tragaperras;
 
 architecture Behavioral of tragaperras is
 
+component  control is
+port(clk, reset: in std_logic;
+    inicio : IN std_logic;
+    fin : IN std_logic;
+    control: OUT std_logic_vector(5 downto 0);
+    segundos_5: IN std_logic;
+    ganar: IN std_logic 
+    );
+end component;
+
+component data_path is
+port (clk, reset: in std_logic;
+    control: in std_logic_vector(5 downto 0);       
+    leds: out std_logic_vector(15 downto 0);                  
+    segundos_5: out std_logic;
+    ganar: out std_logic ;
+    cont1: OUT std_logic_vector (3 DOWNTO 0);
+    cont2: OUT std_logic_vector (3 DOWNTO 0)
+    ); 
+end component;
+
+signal control_aux: std_logic_vector (5 downto 0);
+signal aux_5, aux_Win: std_logic;
 begin
+ControllerInst: control port map (
+    clk=>clk,
+    reset =>rst,
+    inicio => inicio,
+    fin => fin,
+    control => control_aux,
+    segundos_5 =>aux_5,
+    ganar =>aux_Win
+);
 
-
+DataPath: data_path port map (
+    clk=>clk,
+    reset =>rst,
+    control => control_aux,
+    segundos_5 =>aux_5,
+    ganar =>aux_Win,
+    leds=> leds,
+    cont1=>cont1,
+    cont2=>cont2
+);
 end Behavioral;
