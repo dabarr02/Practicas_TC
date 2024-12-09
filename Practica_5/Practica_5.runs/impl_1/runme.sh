@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.runs/impl_1'
+HD_PWD='C:/Vivado_Pr/Practica_5/Practica_5.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

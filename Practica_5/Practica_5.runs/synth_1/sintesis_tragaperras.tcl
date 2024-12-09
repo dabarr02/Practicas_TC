@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.runs/synth_1/sintesis_tragaperras.tcl"
+  variable script "C:/Vivado_Pr/Practica_5/Practica_5.runs/synth_1/sintesis_tragaperras.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,40 +70,38 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.cache/wt [current_project]
-set_property parent.project_path C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.xpr [current_project]
+set_property webtalk.parent_dir C:/Vivado_Pr/Practica_5/Practica_5.cache/wt [current_project]
+set_property parent.project_path C:/Vivado_Pr/Practica_5/Practica_5.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo c:/VivadoGit/Practicas_TC/Practica_5/Practica_5.cache/ip [current_project]
+set_property ip_output_repo c:/Vivado_Pr/Practica_5/Practica_5.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/new/RegAtraer.vhd
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/new/RegPerder.vhd
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/new/RegWin.vhd
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/new/biestabl.vhd
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/imports/new/comparador.vhd
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/new/contador.vhd
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/new/control.vhd
-  {C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/imports/Ficheros máquina tragaperras-20241206/conv_7seg.vhd}
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/new/data_path.vhd
-  {C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/imports/Ficheros máquina tragaperras-20241206/debouncer.vhd}
-  {C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/imports/Ficheros máquina tragaperras-20241206/displays.vhd}
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/new/divisor100HZ.vhd
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/new/divisor250HZ.vhd
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/new/divisor2HZ.vhd
-  C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/new/tragaperras.vhd
-  {C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/sources_1/imports/Ficheros máquina tragaperras-20241206/sintesis_tragaperras.vhd}
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/new/RegAtraer.vhd
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/new/RegPerder.vhd
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/new/RegWin.vhd
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/new/biestabl.vhd
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/imports/new/comparador.vhd
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/new/contador.vhd
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/new/control.vhd
+  {C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/imports/Ficheros máquina tragaperras-20241206/conv_7seg.vhd}
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/new/data_path.vhd
+  {C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/imports/Ficheros máquina tragaperras-20241206/debouncer.vhd}
+  {C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/imports/Ficheros máquina tragaperras-20241206/displays.vhd}
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/new/divisor100HZ.vhd
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/new/divisor250HZ.vhd
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/new/divisor2HZ.vhd
+  C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/new/tragaperras.vhd
+  {C:/Vivado_Pr/Practica_5/Practica_5.srcs/sources_1/imports/Ficheros máquina tragaperras-20241206/sintesis_tragaperras.vhd}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -114,12 +112,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/constrs_1/imports/Ficheros máquina tragaperras-20241206/Basys3_Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/constrs_1/imports/Ficheros máquina tragaperras-20241206/Basys3_Master.xdc}}]
+read_xdc {{C:/Vivado_Pr/Practica_5/Practica_5.srcs/constrs_1/imports/Ficheros máquina tragaperras-20241206/Basys3_Master.xdc}}
+set_property used_in_implementation false [get_files {{C:/Vivado_Pr/Practica_5/Practica_5.srcs/constrs_1/imports/Ficheros máquina tragaperras-20241206/Basys3_Master.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.srcs/utils_1/imports/synth_1/sintesis_tragaperras.dcp
+read_checkpoint -auto_incremental -incremental C:/Vivado_Pr/Practica_5/Practica_5.srcs/utils_1/imports/synth_1/sintesis_tragaperras.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

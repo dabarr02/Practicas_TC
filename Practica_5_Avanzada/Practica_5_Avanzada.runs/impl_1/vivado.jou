@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Sat Dec  7 02:31:53 2024
-# Process ID: 12832
-# Current directory: C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.runs/impl_1
+# Start of session at: Mon Dec  9 09:32:52 2024
+# Process ID: 12928
+# Current directory: C:/Vivado_Pr/Practica_5_Avanzada/Practica_5_Avanzada.runs/impl_1
 # Command line: vivado.exe -log sintesis_tragaperras.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source sintesis_tragaperras.tcl -notrace
-# Log file: C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.runs/impl_1/sintesis_tragaperras.vdi
-# Journal file: C:/VivadoGit/Practicas_TC/Practica_5/Practica_5.runs/impl_1\vivado.jou
-# Running On: PC-Dani, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 8, Host memory: 34289 MB
+# Log file: C:/Vivado_Pr/Practica_5_Avanzada/Practica_5_Avanzada.runs/impl_1/sintesis_tragaperras.vdi
+# Journal file: C:/Vivado_Pr/Practica_5_Avanzada/Practica_5_Avanzada.runs/impl_1\vivado.jou
+# Running On: TinkPad-Dani, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 21168 MB
 #-----------------------------------------------------------
 source sintesis_tragaperras.tcl -notrace
