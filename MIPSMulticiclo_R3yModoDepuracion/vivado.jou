@@ -13,3 +13,4 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.xpr
+update_compile_order -fileset sources_1

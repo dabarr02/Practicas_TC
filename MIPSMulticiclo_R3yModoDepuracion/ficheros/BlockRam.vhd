@@ -27,7 +27,7 @@ architecture Behavioral of BlockRam is
 										x"1000FFFC",-- 			beq R0, R0, WHILE											0x00000020	000100 00000 00000 1111111111111100
 										x"AC830038",-- FIN: 	sw R3, 56(R4)  (sw R3, C) 									0x00000024	101011 00100 00011 0000000000111000
 										x"1000FFFF",-- FINAL:	beq R0, R0, FINAL											0x00000028	000100 00000 00000 1111111111111111
-										x"00000007",-- 			VALOR A ¿Sin tabla de literales para simplificar?			0x0000002C	0x00000007
+										x"00000007",-- 			VALOR A Sin tabla de literales para simplificar?			0x0000002C	0x00000007
 										x"00000003",-- 			VALOR B														0x00000030	0x00000003
 										x"00000001",--			VALOR UNO													0x00000034	0x00000001
 													--			VALOR C = A*B												0x00000038

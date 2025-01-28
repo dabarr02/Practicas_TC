@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Dec 11 10:55:33 2024
-# Process ID: 11916
-# Current directory: C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/impl_1
+# Start of session at: Mon Jan 27 21:59:17 2025
+# Process ID: 4708
+# Current directory: C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/impl_1
 # Command line: vivado.exe -log sintesis_MIPSMulticiclo.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source sintesis_MIPSMulticiclo.tcl -notrace
-# Log file: C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/impl_1/sintesis_MIPSMulticiclo.vdi
-# Journal file: C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/impl_1\vivado.jou
-# Running On: DESKTOP-I5KJ0SF, OS: Windows, CPU Frequency: 3400 MHz, CPU Physical cores: 4, Host memory: 17061 MB
+# Log file: C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/impl_1/sintesis_MIPSMulticiclo.vdi
+# Journal file: C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/impl_1\vivado.jou
+# Running On: TinkPad-Dani, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 21168 MB
 #-----------------------------------------------------------
 source sintesis_MIPSMulticiclo.tcl -notrace

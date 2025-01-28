@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/synth_1/sintesis_MIPSMulticiclo.tcl"
+  variable script "C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/synth_1/sintesis_MIPSMulticiclo.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param tcl.statsThreshold 360
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -78,36 +77,36 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.cache/wt} [current_project]
-set_property parent.project_path {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.xpr} [current_project]
+set_property webtalk.parent_dir C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.cache/wt [current_project]
+set_property parent.project_path C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo {c:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.cache/ip} [current_project]
+set_property ip_output_repo c:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/ALU.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/BlockRam.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/MIPs_multiciclo.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/bancoDeRegistros.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/conv_7seg.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/debouncer.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/displays.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/memoria.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/multiplexor2a1.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/multiplexor4a1.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/registro.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/rutaDeDatos.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/unidadDeControl.vhd}
-  {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/sintesis_MIPSMulticiclo.vhd}
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/ALU.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/BlockRam.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/MIPs_multiciclo.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/bancoDeRegistros.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/conv_7seg.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/debouncer.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/displays.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/memoria.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/multiplexor2a1.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/multiplexor4a1.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/registro.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/rutaDeDatos.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/unidadDeControl.vhd
+  C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/imports/ficheros/sintesis_MIPSMulticiclo.vhd
 }
-read_ip -quiet {{c:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/ip/DCM_100MHz_10MHz/DCM_100MHz_10MHz.xci}}
-set_property used_in_implementation false [get_files -all {{c:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.gen/sources_1/ip/DCM_100MHz_10MHz/DCM_100MHz_10MHz_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.gen/sources_1/ip/DCM_100MHz_10MHz/DCM_100MHz_10MHz.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.gen/sources_1/ip/DCM_100MHz_10MHz/DCM_100MHz_10MHz_ooc.xdc}}]
+read_ip -quiet C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/ip/DCM_100MHz_10MHz/DCM_100MHz_10MHz.xci
+set_property used_in_implementation false [get_files -all c:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.gen/sources_1/ip/DCM_100MHz_10MHz/DCM_100MHz_10MHz_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.gen/sources_1/ip/DCM_100MHz_10MHz/DCM_100MHz_10MHz.xdc]
+set_property used_in_implementation false [get_files -all c:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.gen/sources_1/ip/DCM_100MHz_10MHz/DCM_100MHz_10MHz_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -118,8 +117,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/ficheros/Basys3_Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/ficheros/Basys3_Master.xdc}}]
+read_xdc C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/ficheros/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/ficheros/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

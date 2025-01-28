@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Wed Dec 11 10:57:18 2024
-| Host             : DESKTOP-I5KJ0SF running 64-bit major release  (build 9200)
+| Date             : Mon Jan 27 22:00:25 2025
+| Host             : TinkPad-Dani running 64-bit major release  (build 9200)
 | Command          : report_power -file sintesis_MIPSMulticiclo_power_routed.rpt -pb sintesis_MIPSMulticiclo_power_summary_routed.pb -rpx sintesis_MIPSMulticiclo_power_routed.rpx
 | Design           : sintesis_MIPSMulticiclo
 | Device           : xc7a35tcpg236-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.187        |
+| Total On-Chip Power (W)  | 0.188        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.115        |
+| Dynamic (W)              | 0.116        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.1         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |     2596 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      971 |     20800 |            4.67 |
+| Slice Logic    |    <0.001 |     2662 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     1028 |     20800 |            4.94 |
 |   CARRY4       |    <0.001 |       27 |      8150 |            0.33 |
-|   Register     |    <0.001 |     1245 |     41600 |            2.99 |
+|   Register     |    <0.001 |     1252 |     41600 |            3.01 |
 |   F7/F8 Muxes  |    <0.001 |      288 |     32600 |            0.88 |
 |   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |    <0.001 |     1946 |       --- |             --- |
+| Signals        |    <0.001 |     1977 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |        50 |            1.00 |
 | MMCM           |     0.106 |        1 |         5 |           20.00 |
 | I/O            |     0.007 |       15 |       106 |           14.15 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.187 |          |           |                 |
+| Total          |     0.188 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -146,8 +146,8 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| sintesis_MIPSMulticiclo |     0.115 |
-|   MIPs                  |     0.001 |
+| sintesis_MIPSMulticiclo |     0.116 |
+|   MIPs                  |     0.002 |
 |     RD                  |     0.001 |
 |   reloj                 |     0.107 |
 |     inst                |     0.107 |

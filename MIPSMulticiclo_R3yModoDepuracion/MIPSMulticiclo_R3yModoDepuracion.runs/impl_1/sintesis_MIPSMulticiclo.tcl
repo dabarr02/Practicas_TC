@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/impl_1/sintesis_MIPSMulticiclo.tcl"
+  variable script "C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/impl_1/sintesis_MIPSMulticiclo.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,9 +122,8 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.statsThreshold 360
-  set_param chipscope.maxJobs 2
-  set_param runs.launchOptions { -jobs 4  }
+  set_param chipscope.maxJobs 3
+  set_param runs.launchOptions { -jobs 6  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
@@ -132,17 +131,17 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.cache/wt} [current_project]
-  set_property parent.project_path {C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.xpr} [current_project]
-  set_property ip_output_repo {{C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.cache/ip}} [current_project]
+  set_property webtalk.parent_dir C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.cache/wt [current_project]
+  set_property parent.project_path C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.xpr [current_project]
+  set_property ip_output_repo C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet {{C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/synth_1/sintesis_MIPSMulticiclo.dcp}}
-  read_ip -quiet {{c:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/ip/DCM_100MHz_10MHz/DCM_100MHz_10MHz.xci}}
+  add_files -quiet C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.runs/synth_1/sintesis_MIPSMulticiclo.dcp
+  read_ip -quiet C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion.srcs/sources_1/ip/DCM_100MHz_10MHz/DCM_100MHz_10MHz.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc {{C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/ficheros/Basys3_Master.xdc}}
+  read_xdc C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/ficheros/Basys3_Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

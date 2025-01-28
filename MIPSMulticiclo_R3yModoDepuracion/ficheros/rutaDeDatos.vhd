@@ -92,21 +92,21 @@ architecture rutaDeDatosArch of rutaDeDatos is
 		);
 	end component;  
   
-  signal control_aux : std_logic_vector(15 downto 0);
+  signal control_aux : std_logic_vector(16 downto 0); -- Cambio para la practica: Necesitamos un bit mas para la señal del MUX de 4 a 1
   alias PCWrite	     : std_logic is control_aux(0);
   alias IorD 		 : std_logic is control_aux(1);
   alias MemWrite	 : std_logic is control_aux(2);
   alias MemRead 	 : std_logic is control_aux(3);
   alias IRWrite 	 : std_logic is control_aux(4);
   alias RegDst 	     : std_logic is control_aux(5);
-  alias MemtoReg 	 : std_logic is control_aux(6);
-  alias RegWrite 	 : std_logic is control_aux(7);
-  alias AWrite 	     : std_logic is control_aux(8);
-  alias BWrite 	     : std_logic is control_aux(9);  
-  alias ALUScrA 	 : std_logic is control_aux(10);
-  alias ALUScrB 	 : std_logic_vector(1 downto 0) is control_aux(12 downto 11);
+  alias MemtoReg 	 : std_logic_vector (1 downto 0) is control_aux(7 downto 6); --Añadimos un bit mas para el MUX de 4 a 1
+  alias RegWrite 	 : std_logic is control_aux(8);
+  alias AWrite 	     : std_logic is control_aux(9);
+  alias BWrite 	     : std_logic is control_aux(10);  
+  alias ALUScrA 	 : std_logic is control_aux(11);
+  alias ALUScrB 	 : std_logic_vector(1 downto 0) is control_aux(13 downto 12);
   alias OutWrite 	 : std_logic is control_aux(13);
-  alias ALUop 		 : std_logic_vector(1 downto 0) is control_aux(15 downto 14);
+  alias ALUop 		 : std_logic_vector(1 downto 0) is control_aux(16 downto 15);
   
   
   signal salidaALU       : std_logic_vector(31 downto 0);
@@ -142,7 +142,7 @@ begin
 	
 	mux_RW : multiplexor2a1 generic map (bits_entradas => 5) port map(entrada0 => IR(20 downto 16), entrada1 => IR(15 downto 11), seleccion => RegDst, salida => RW);
 	
-	mux_MDR : multiplexor2a1 port map(entrada0 => ALUout, entrada1 => salidaMem, seleccion => MemtoReg, salida => busW);
+	mux_MDR : multiplexor4a1 port map(entrada0 => ALUout, entrada1 => salidaMem, entrada2 => signo_extendido, seleccion => MemtoReg, salida => busW); --Cambio practica: Añadimos entrada para mv inmediato. (Unimo la salida de sigExtend)
 	
 	-- Extension de signo
 	signo_extendido(15 downto 0) <= IR(15 downto 0);

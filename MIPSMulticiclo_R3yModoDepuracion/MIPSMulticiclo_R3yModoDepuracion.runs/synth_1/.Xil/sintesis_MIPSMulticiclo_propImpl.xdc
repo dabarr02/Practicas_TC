@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/hlocal/TC/MIPS Multiciclo-CASA-20241211/MIPSMulticiclo_R3yModoDepuracion/MIPSMulticiclo_R3yModoDepuracion/ficheros/Basys3_Master.xdc} rfile:../../../ficheros/Basys3_Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Vivado_Pr/MIPSMulticiclo_R3yModoDepuracion/ficheros/Basys3_Master.xdc rfile:../../../ficheros/Basys3_Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk]
 set_property src_info {type:XDC file:1 line:42 export:INPUT save:INPUT read:READ} [current_design]

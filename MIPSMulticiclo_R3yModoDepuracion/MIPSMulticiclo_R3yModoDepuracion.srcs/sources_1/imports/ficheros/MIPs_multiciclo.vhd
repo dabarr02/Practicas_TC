@@ -48,7 +48,7 @@ architecture MIPSMulticicloArch of MIPS_multiciclo is
 		port( 
 			clk		    : in  std_logic;
 			rst 		: in  std_logic;
-			control	    : out std_logic_vector(15 downto 0);
+			control	    : out std_logic_vector(17 downto 0);
 			Zero		: in  std_logic;
 			op			: in  std_logic_vector(5 downto 0);
 			modo		: in  std_logic;
@@ -60,14 +60,14 @@ architecture MIPSMulticicloArch of MIPS_multiciclo is
 		port( 
 			clk		    : in  std_logic;
 			rst 		: in  std_logic;
-			control	    : in  std_logic_vector(15 downto 0);
+			control	    : in  std_logic_vector(17 downto 0);
 			Zero		: out std_logic;
 			op			: out std_logic_vector(5 downto 0);
 			R3			: out std_logic_vector(31 downto 0);
 			PCout		: out std_logic_vector(31 downto 0)
 		);
 	end component;
-	signal control : std_logic_vector(15 downto 0);
+	signal control : std_logic_vector(17 downto 0);
 	signal Zero	: std_logic;
 	signal op : std_logic_vector(5 downto 0);
 	

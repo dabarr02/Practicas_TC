@@ -5,7 +5,7 @@ entity rutaDeDatos is
 	port( 
 		clk		: in  std_logic;
 		rst   	: in  std_logic;
-		control	: in  std_logic_vector(15 downto 0);
+		control	: in  std_logic_vector(17 downto 0);
 		Zero	: out std_logic;
 		op		: out std_logic_vector(5 downto 0);
 		R3		: out std_logic_vector(31 downto 0);
@@ -92,22 +92,22 @@ architecture rutaDeDatosArch of rutaDeDatos is
 		);
 	end component;  
   
-  signal control_aux : std_logic_vector(15 downto 0);
+  signal control_aux : std_logic_vector(17 downto 0); -- Cambio para la practica: Necesitamos un bit mas para la seï¿½al del MUX de 4 a 1
   alias PCWrite	     : std_logic is control_aux(0);
   alias IorD 		 : std_logic is control_aux(1);
   alias MemWrite	 : std_logic is control_aux(2);
   alias MemRead 	 : std_logic is control_aux(3);
   alias IRWrite 	 : std_logic is control_aux(4);
   alias RegDst 	     : std_logic is control_aux(5);
-  alias MemtoReg 	 : std_logic is control_aux(6);
-  alias RegWrite 	 : std_logic is control_aux(7);
-  alias AWrite 	     : std_logic is control_aux(8);
-  alias BWrite 	     : std_logic is control_aux(9);  
-  alias ALUScrA 	 : std_logic is control_aux(10);
-  alias ALUScrB 	 : std_logic_vector(1 downto 0) is control_aux(12 downto 11);
-  alias OutWrite 	 : std_logic is control_aux(13);
-  alias ALUop 		 : std_logic_vector(1 downto 0) is control_aux(15 downto 14);
-  
+  alias MemtoReg 	 : std_logic_vector (1 downto 0) is control_aux(7 downto 6); --Aï¿½adimos un bit mas para el MUX de 4 a 1
+  alias RegWrite 	 : std_logic is control_aux(8);
+  alias AWrite 	     : std_logic is control_aux(9);
+  alias BWrite 	     : std_logic is control_aux(10);  
+  alias ALUScrA 	 : std_logic is control_aux(11);
+  alias ALUScrB 	 : std_logic_vector(1 downto 0) is control_aux(13 downto 12);
+  alias OutWrite 	 : std_logic is control_aux(14);
+  alias ALUop 		 : std_logic_vector(1 downto 0) is control_aux(16 downto 15);
+  alias MuxSalto : std_logic is control_aux(17); --Señal para el Mux del PC
   
   signal salidaALU       : std_logic_vector(31 downto 0);
   signal PC              : std_logic_vector(31 downto 0);
@@ -126,13 +126,16 @@ architecture rutaDeDatosArch of rutaDeDatos is
   signal salidaBancoRegA : std_logic_vector(31 downto 0);
   signal salidaBancoRegb : std_logic_vector(31 downto 0);
   
+  signal saltoPC: std_logic_vector(31 downto 0);
+  signal dirSalto: std_logic_vector(31 downto 0); 
+  
 begin
 
 	PCout <= PC;
  	control_aux <= control;
 	op <= IR(31 downto 26);
 
-	reg_PC : registro port map(clk => clk, rst => rst, load => PCWrite, din => salidaALU, dout => PC);
+	reg_PC : registro port map(clk => clk, rst => rst, load => PCWrite, din => saltoPC, dout => PC); --Cambio de la entrada del Registro para que sea la salida de MuxPC (muxSalto)
 
 	mux_IorD : multiplexor2a1 port map(entrada0 => PC, entrada1 => ALUOut, seleccion => IorD, salida => ADDR); 
 
@@ -142,15 +145,17 @@ begin
 	
 	mux_RW : multiplexor2a1 generic map (bits_entradas => 5) port map(entrada0 => IR(20 downto 16), entrada1 => IR(15 downto 11), seleccion => RegDst, salida => RW);
 	
-	mux_MDR : multiplexor2a1 port map(entrada0 => ALUout, entrada1 => salidaMem, seleccion => MemtoReg, salida => busW);
+	mux_MDR : multiplexor4a1 port map(entrada0 => ALUout, entrada1 => salidaMem, entrada2 => signo_extendido, entrada3=>A, seleccion => MemtoReg, salida => busW); --Cambio practica: Aï¿½adimos entrada para mv inmediato. (Unimos la salida de sigExtend)
 	
+	mux_pc: multiplexor2a1 port map (entrada0 => salidaALU, entrada1=>dirSalto,seleccion=>MuxSalto,salida=>saltoPC);
 	-- Extension de signo
 	signo_extendido(15 downto 0) <= IR(15 downto 0);
 	signo_extendido(31 downto 16) <= x"FFFF" when (IR(15) = '1') else x"0000";
 	
 	-- <<2
 	desplazado <= signo_extendido(29 downto 0)&"00";
-		
+	--Calculo del salto para jump:
+	dirSalto<= "000000"&IR(25 downto 0);
 	banco_registros: bancoDeRegistros port map(clk => clk, rst => rst, RA => IR(25 downto 21), RB => IR(20 downto 16), RegWrite => RegWrite, RW => RW, busW => busW, busA => salidaBancoRegA, busB => salidaBancoRegB, R3 => R3);
 	
 	reg_A : registro port map(clk => clk, rst => rst, load => AWrite, din => salidaBancoRegA, dout => A);

@@ -15,23 +15,23 @@ end unidadDeControl;
 
 architecture unidadDeControlArch of unidadDeControl is
 
-  signal control_aux : std_logic_vector(15 downto 0);
-  alias PCWrite	     : std_logic is control_aux(0);
-  alias IorD 		 : std_logic is control_aux(1);
-  alias MemWrite	 : std_logic is control_aux(2);
-  alias MemRead 	 : std_logic is control_aux(3);
-  alias IRWrite 	 : std_logic is control_aux(4);
-  alias RegDst 	     : std_logic is control_aux(5);
-  alias MemtoReg 	 : std_logic is control_aux(6);
-  alias RegWrite 	 : std_logic is control_aux(7);
-  alias AWrite 	     : std_logic is control_aux(8);
-  alias BWrite 	     : std_logic is control_aux(9);  
-  alias ALUScrA 	 : std_logic is control_aux(10);
-  alias ALUScrB 	 : std_logic_vector(1 downto 0) is control_aux(12 downto 11);
-  alias OutWrite 	 : std_logic is control_aux(13);
-  alias ALUop 		 : std_logic_vector(1 downto 0) is control_aux(15 downto 14);
+signal control_aux : std_logic_vector(16 downto 0); -- Cambio para la practica: Necesitamos un bit mas para la señal del MUX de 4 a 1
+alias PCWrite	     : std_logic is control_aux(0);
+alias IorD 		 : std_logic is control_aux(1);
+alias MemWrite	 : std_logic is control_aux(2);
+alias MemRead 	 : std_logic is control_aux(3);
+alias IRWrite 	 : std_logic is control_aux(4);
+alias RegDst 	     : std_logic is control_aux(5);
+alias MemtoReg 	 : std_logic_vector (1 downto 0) is control_aux(7 downto 6); --Añadimos un bit mas para el MUX de 4 a 1
+alias RegWrite 	 : std_logic is control_aux(8);
+alias AWrite 	     : std_logic is control_aux(9);
+alias BWrite 	     : std_logic is control_aux(10);  
+alias ALUScrA 	 : std_logic is control_aux(11);
+alias ALUScrB 	 : std_logic_vector(1 downto 0) is control_aux(13 downto 12);
+alias OutWrite 	 : std_logic is control_aux(13);
+alias ALUop 		 : std_logic_vector(1 downto 0) is control_aux(16 downto 15);
   
-  TYPE states IS (S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11);
+  TYPE states IS (S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11,S12); --Cambio para la practica: Añadimos un estados: 12 (mv inmediato),
   SIGNAL currentState, nextState: states;
 
 begin

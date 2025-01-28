@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date                      : Wed Dec 11 10:56:35 2024
-| Host                      : DESKTOP-I5KJ0SF running 64-bit major release  (build 9200)
+| Date                      : Mon Jan 27 21:59:54 2025
+| Host                      : TinkPad-Dani running 64-bit major release  (build 9200)
 | Command                   : report_io -file sintesis_MIPSMulticiclo_io_placed.rpt
 | Design                    : sintesis_MIPSMulticiclo
 | Device                    : xc7a35t

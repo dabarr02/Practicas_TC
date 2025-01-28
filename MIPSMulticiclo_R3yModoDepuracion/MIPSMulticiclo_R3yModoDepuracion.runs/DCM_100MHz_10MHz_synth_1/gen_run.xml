@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="DCM_100MHz_10MHz_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1733910766">
   <File Type="PA-TCL" Name="DCM_100MHz_10MHz.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="DCM_100MHz_10MHz_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="DCM_100MHz_10MHz_reports.tcl"/>
   <File Type="RDS-RDS" Name="DCM_100MHz_10MHz.vds"/>
   <File Type="RDS-UTIL" Name="DCM_100MHz_10MHz_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="DCM_100MHz_10MHz_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="DCM_100MHz_10MHz.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="DCM_100MHz_10MHz_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="DCM_100MHz_10MHz_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DCM_100MHz_10MHz" RelGenDir="$PGENDIR/DCM_100MHz_10MHz">
     <File Path="$PSRCDIR/sources_1/ip/DCM_100MHz_10MHz/DCM_100MHz_10MHz.xci">
       <FileInfo>
@@ -42,9 +39,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
